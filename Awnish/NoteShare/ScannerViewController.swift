@@ -620,7 +620,6 @@ class PDFThumbnailViewController: UIViewController {
 }
 
 
-#Preview {
-
-    ScannerViewController()
+#Preview(){
+    ScannedDocumentCell()
 }

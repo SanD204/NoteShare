@@ -91,6 +91,7 @@ class NoteCollectionViewCell: UICollectionViewCell {
         descriptionLabel.text = note.description
         coverImageView.image = note.coverImage
     }
+    
 }
 
 // MARK: - SharedNoteTableViewCell.swift
@@ -382,6 +383,7 @@ class HomeViewController: UIViewController {
         setupDelegates()
     }
     
+    
     // MARK: - Setup
     private func setupUI() {
         view.backgroundColor = .systemBackground
@@ -448,6 +450,15 @@ class HomeViewController: UIViewController {
         recentFilesCollectionView.dataSource = self
         recentFilesCollectionView.delegate = self
     }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if indexPath.section == 1 {
+//            let cardVC = CardViewController()
+//            navigationController?.pushViewController(cardVC, animated: true)
+//        }
+//    }
+
+
+   
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -491,6 +502,3 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 
-#Preview(){
-    HomeViewController()
-}

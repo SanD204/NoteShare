@@ -16,7 +16,7 @@ class TopCollegesView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -30,7 +30,7 @@ class TopCollegesView: UIView {
         collectionView.register(TopCollegeCell.self, forCellWithReuseIdentifier: TopCollegeCell.identifier)
         return collectionView
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -271,48 +271,13 @@ class ExploreViewController: UIViewController, UICollectionViewDelegate, UIColle
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 1 {
-            let subject = subjects[indexPath.item]
-            let subjectVC = SubjectViewController(subject: subject)
+            _ = subjects[indexPath.item]
+            let subjectVC = SubjectsViewController()
             navigationController?.pushViewController(subjectVC, animated: true)
         }
     }
-
-    private func presentPDFViewer(for url: URL) {
-        let pdfViewController = UIViewController()
-        let pdfView = PDFView(frame: pdfViewController.view.bounds)
-        pdfViewController.view.addSubview(pdfView)
-        
-        if let document = PDFDocument(url: url) {
-            pdfView.document = document
-        }
-        
-        present(pdfViewController, animated: true, completion: nil)
-    }
 }
-
-class SubjectViewController: UIViewController {
-    var subject: Subject
-
-    init(subject: Subject) {
-        self.subject = subject
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let subjectView = PDFViewerViewController(pdfURL:subject.pdfURL);
-        subjectView.modalPresentationStyle = .fullScreen
-        present(subjectView, animated: true, completion: nil)
-    }
-    
-}
-
 
 #Preview(){
     ExploreViewController()
 }
-

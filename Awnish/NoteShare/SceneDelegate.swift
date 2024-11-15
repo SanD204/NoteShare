@@ -37,16 +37,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             image: UIImage(systemName: "book.fill"),
             selectedImage: UIImage(systemName: "book.fill")
         )
-        let coursesViewController = UIViewController()
+        let coursesViewController = NotesViewController()
         coursesViewController.view.backgroundColor = .systemBackground
         coursesViewController.tabBarItem = UITabBarItem(
-            title: "MyNotes",
+            title: "Noteslist",
             image: UIImage(systemName: "book"),
             selectedImage: UIImage(systemName: "book.fill")
         )
         
         // Set up the 'Profile' tab with a basic placeholder view controller
-        let profileViewController = UIViewController()
+        let profileViewController = CardViewController()
         profileViewController.view.backgroundColor = .systemBackground
         profileViewController.tabBarItem = UITabBarItem(
             title: "Profile",
@@ -54,13 +54,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             selectedImage: UIImage(systemName: "person.fill")
         )
         
+    
         // Initialize the tab bar controller and add the view controllers
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [
             UINavigationController(rootViewController: exploreViewController),
             UINavigationController(rootViewController: subjectsViewController),
-//            UINavigationController(rootViewController: coursesViewController),
-//            UINavigationController(rootViewController: profileViewController),
+            UINavigationController(rootViewController: coursesViewController),
+            UINavigationController(rootViewController: profileViewController),
             UINavigationController(rootViewController: uploadViewController),
 //            UINavigationController(rootViewController: searchViewController),
             UINavigationController(rootViewController: HomeViewController)

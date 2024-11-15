@@ -1,5 +1,4 @@
 import PDFKit
-
 class PDFViewerViewController: UIViewController {
     private let pdfView: PDFView = {
         let pdfView = PDFView()
@@ -23,6 +22,7 @@ class PDFViewerViewController: UIViewController {
         setupUI()
         loadPDF()
     }
+    
     private func setupUI() {
         view.addSubview(pdfView)
         NSLayoutConstraint.activate([
@@ -32,6 +32,7 @@ class PDFViewerViewController: UIViewController {
             pdfView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
     private func loadPDF() {
         guard let document = PDFDocument(url: pdfURL) else {
             return
@@ -45,6 +46,4 @@ class PDFViewerViewController: UIViewController {
             }
         }
     }
-
 }
-

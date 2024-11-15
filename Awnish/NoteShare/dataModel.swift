@@ -25,7 +25,6 @@ struct Note {
     let coverImage: UIImage?
     let dateCreated: Date
     let lastModified: Date
-    
     init(title: String, description: String, author: String, coverImage: UIImage?,
          dateCreated: Date = Date(), lastModified: Date = Date()) {
         self.title = title

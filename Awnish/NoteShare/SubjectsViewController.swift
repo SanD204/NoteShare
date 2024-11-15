@@ -3,7 +3,7 @@ import PDFKit
 
 class SubjectCell: UICollectionViewCell {
     static let identifier = "SubjectCell"
-
+    
     private let cardView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -20,7 +20,7 @@ class SubjectCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16, weight: .medium)
@@ -107,7 +107,7 @@ class SubjectsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemGray6
         setupUI()
     }
     
@@ -154,6 +154,6 @@ extension SubjectsViewController: UICollectionViewDataSource, UICollectionViewDe
     }
 }
 
-#Preview {
+#Preview(){
     SubjectsViewController()
 }
