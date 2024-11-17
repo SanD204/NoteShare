@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "integral-3d-icon-download-in-png-blend-fbx-gltf-file-formats--math-symbol-mathematical-trigonometric-mathematics-part-ii-pack-school-education-icons-8470487.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

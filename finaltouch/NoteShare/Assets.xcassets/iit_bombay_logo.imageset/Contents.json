@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Indian_Institute_of_Technology_Bombay_Logo.svg.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
